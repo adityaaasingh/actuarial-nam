@@ -2,8 +2,8 @@
 
 ## 1. Data and likelihood
 - Response: nclaims for belgian data, continuous Y for synthetic data
-- Exposure: 
-- Offset: 
+- Exposure: lambda is exposure to risk, to account for different policies which have different exposures to risk
+- Offset: log(lambda) is the offset term, to adjust for varying times between policies
 
 - Frequency: Poisson, log link - mean and NLL:
 - Synthetic: Gamma parametrisation (shape, scale), mean, variance:
