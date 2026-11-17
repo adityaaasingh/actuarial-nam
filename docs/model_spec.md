@@ -1,8 +1,11 @@
 # ANAM model spec
 
 ## 1. Data and likelihood
-- Response, exposure, offset:
-- Frequency: Poisson, log link — mean and NLL:
+- Response: nclaims for belgian data, continuous Y for synthetic data
+- Exposure: 
+- Offset: 
+
+- Frequency: Poisson, log link - mean and NLL:
 - Synthetic: Gamma parametrisation (shape, scale), mean, variance:
 
 ## 2. Linear predictor
