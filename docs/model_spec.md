@@ -1,7 +1,5 @@
 # ANAM model spec
 
-Notation: own symbols, defined once here. Cite paper equation numbers in brackets.
-
 ## 1. Data and likelihood
 - Response, exposure, offset:
 - Frequency: Poisson, log link — mean and NLL:
