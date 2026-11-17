@@ -1,0 +1,22 @@
+.PHONY: test lint data train pipeline serve reproduce
+
+test:
+	uv run pytest
+
+lint:
+	uv run ruff check . && uv run ruff format --check .
+
+data:
+	@echo 'data: not implemented yet (M1)'
+
+train:
+	@echo 'train: not implemented yet (M1)'
+
+pipeline:
+	@echo 'pipeline: not implemented yet (M1)'
+
+serve:
+	@echo 'serve: not implemented yet (M1)'
+
+reproduce:
+	@echo 'reproduce: not implemented yet (M4)'
