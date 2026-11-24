@@ -2,7 +2,7 @@
 __pycache__/
 .ipynb_checkpoints/
 /data/
-mlruns/
-results/
+/mlruns/
+/results/
 .env
 .DS_Store
