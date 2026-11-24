@@ -56,7 +56,11 @@
 - 3 re-train all selected main and pairwise effects as a full model:
 
 ## 7. Training
-- Optimiser, batch size, epochs, early stopping:
+- C(Y, 𝜽) = Log liklihood + Pmc + Psmooth, optimised using gradient descent, in an iterative fashion
+- Adam optimiser
+- batch size 1000
+- epochs 5000
+- early stopping: patience = 5
 
 ## 8. Gaps — what the paper does not say
 | Item | Paper says | Authors' notebook says | My choice |
