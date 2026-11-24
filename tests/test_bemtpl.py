@@ -1,4 +1,5 @@
 import pytest
+
 from anam.data.bemtpl import (
     CATEGORICAL,
     CONTINUOUS,

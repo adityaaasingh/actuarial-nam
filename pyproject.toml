@@ -43,3 +43,7 @@ explicit = true
 
 [tool.uv.sources]
 torch = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux'" }]
+
+
+[tool.ruff.lint.isort]
+known-first-party = ["anam"]
