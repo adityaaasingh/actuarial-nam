@@ -27,6 +27,7 @@ name = "anam"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "joblib" },
     { name = "matplotlib" },
     { name = "numpy" },
     { name = "pandas" },
@@ -52,6 +53,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "joblib", specifier = ">=1.6.0" },
     { name = "matplotlib", specifier = ">=3.11.2" },
     { name = "numpy", specifier = "<2" },
     { name = "pandas", specifier = ">=2.3.3" },

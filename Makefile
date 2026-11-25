@@ -7,7 +7,7 @@ lint:
 	uv run ruff check . && uv run ruff format --check .
 
 data:
-	@echo 'data: not implemented yet (M1)'
+	uv run python -m anam.data.bemtpl && uv run python -m anam.data.synthetic && uv run python -m anam.data.prepare
 
 train:
 	@echo 'train: not implemented yet (M1)'
