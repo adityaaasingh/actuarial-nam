@@ -6,6 +6,8 @@ from pathlib import Path
 import pandas as pd
 import pyreadr
 
+from anam.data.schemas import BEMTPL_SCHEMA
+
 RAW_PATH = Path("data/raw/beMTPL97.rda")
 PROCESSED_PATH = Path("data/processed/bemtpl97.parquet")
 
@@ -33,11 +35,12 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
         df[col] = df[col].astype(str).astype("category")
     for col in CONTINUOUS:
         df[col] = df[col].astype("float64")
+    df[TARGET] = df[TARGET].astype("int64")
     return df[[EXPOSURE, TARGET, SEVERITY, *FEATURES]].reset_index(drop=True)
 
 
 def ingest(raw: Path = RAW_PATH, out: Path = PROCESSED_PATH) -> pd.DataFrame:
-    df = clean(load_raw(raw))
+    df = BEMTPL_SCHEMA.validate(clean(load_raw(raw)), lazy=True)
     out.parent.mkdir(parents=True, exist_ok=True)
     df.to_parquet(out, index=False)
     return df

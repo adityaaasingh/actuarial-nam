@@ -9,6 +9,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from anam.data.schemas import SYNTHETIC_SCHEMA
+
 BETA = 6.0
 N_SAMPLES = 50_000
 FEATURES = [f"X{i}" for i in range(1, 11)]
@@ -81,7 +83,7 @@ def remove_outliers(df: pd.DataFrame) -> pd.DataFrame:
 if __name__ == "__main__":
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     for level, df in generate().items():
-        clean = remove_outliers(df)
+        clean = SYNTHETIC_SCHEMA.validate(remove_outliers(df), lazy=True)
         path = OUT_DIR / f"synthetic_{level}.parquet"
         clean.to_parquet(path)
         print(
