@@ -7,3 +7,5 @@ Paper: not specified. Choice: the last PyTorch release with Intel Mac wheels, us
 - **pyarrow pinned to 21.0.0.** Newer pyarrow requires NumPy 2, which torch 2.2.2 (last Intel Mac build) can't use.
 
 Schema bounds are plausible ranges, wider than the observed min/max; category levels are strict.
+
+- **cryptography pinned below 49.** Versions 49+ have no Intel Mac wheels; mlflow accepts 43–50.
