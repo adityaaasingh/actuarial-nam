@@ -10,10 +10,10 @@ data:
 	uv run python -m anam.data.bemtpl && uv run python -m anam.data.synthetic && uv run python -m anam.data.prepare
 
 train:
-	@echo 'train: not implemented yet (M1)'
+	uv run python -m anam.train_glm
 
 pipeline:
-	@echo 'pipeline: not implemented yet (M1)'
+	$(MAKE) data train
 
 serve:
 	@echo 'serve: not implemented yet (M1)'
